@@ -16,7 +16,7 @@
         {% endblock %}
     </head>
     <body>
-        {% block nav %}
+        {% block body %}
             <div class='dashboard'>
                 <!-- Hamburger Menu -->
                 <div class='dashboard-app'>
@@ -24,7 +24,7 @@
                         <span onclick="toggleHamburger(this)" class="menu-toggle material-symbols-outlined">
                             arrow_back_ios
                         </span>
-                        <a href="/" class="foodi" style="text-decoration: none">
+                        <a href="{{ path('home_page') }}" class="foodi" style="text-decoration: none">
                             Foodi Command Center
                         </a>
                     </header>
@@ -36,18 +36,18 @@
 
                 <div class="dashboard-nav">
                     <header>
-                        <a href="#" class="brand-logo">
+                        <a href="{{ path('home_page') }}" class="brand-logo">
                             <i class="fa-solid fa-kitchen-set"></i>
                             <span>Gourmets</span>
                         </a>
                     </header>
                     <nav class="dashboard-nav-list">
                         <!-- Home -->
-                        <a href="/" class="dashboard-nav-item">
+                        <a href="{{ path('home_page') }}" class="dashboard-nav-item">
                             <i class="fas fa-home"></i>Home
                         </a>
                         <!-- Dashboard -->
-                        <a href="/dashboard" class="dashboard-nav-item">
+                        <a href="{{ path('dashboard') }}" class="dashboard-nav-item">
                             <i class="fas fa-tachometer-alt"></i>Dashboard
                         </a>
                         <!-- Logout -->
@@ -59,7 +59,6 @@
                 </div>
             </div>
         {% endblock %}
-        {% block body %}{% endblock %}
     <footer class="footer">
         <div class="container text-center">
             <span class="pink-highlight" style="display: inline-block">Made with
